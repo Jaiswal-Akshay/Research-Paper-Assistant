@@ -1,0 +1,23 @@
+# Virtual environment
+.venv/
+
+# Python-generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local research papers
+data/uploads/*
+!data/uploads/.gitkeep
+
+# Local vector database
+chroma_db/*
+!chroma_db/.gitkeep
+
+# Environment variables
+.env
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
