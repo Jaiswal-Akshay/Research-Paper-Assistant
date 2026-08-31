@@ -1,6 +1,6 @@
 from pathlib import Path
 
-import fitz
+import pymupdf
 import pytest
 from langchain_core.documents import Document
 
@@ -14,7 +14,7 @@ from ingestion import (
 
 
 def create_test_pdf(pdf_path: Path) -> None:
-    document = fitz.open()
+    document = pymupdf.open()
 
     page_one = document.new_page()
     page_one.insert_text(

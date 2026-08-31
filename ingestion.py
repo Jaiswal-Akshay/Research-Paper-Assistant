@@ -2,7 +2,7 @@ import hashlib
 import re
 from pathlib import Path
 
-import fitz
+import pymupdf
 import pdfplumber
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -211,7 +211,7 @@ def extract_pdf_documents(
     documents: list[Document] = []
 
     try:
-        pymupdf_document = fitz.open(pdf_path)
+        pymupdf_document = pymupdf.open(pdf_path)
         plumber_document = pdfplumber.open(pdf_path)
     except Exception as exc:
         raise DocumentProcessingError(
