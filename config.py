@@ -18,11 +18,23 @@ CHUNK_OVERLAP = 200
 TABLE_ROWS_PER_CHUNK = 20
 
 # Retrieval
-TOP_K = 6
-FETCH_K = 15
+TOP_K = 4
+FETCH_K = 10
 
 # Vector database
 COLLECTION_NAME = "research_papers"
 
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 CHROMA_DIR.mkdir(parents=True, exist_ok=True)
+
+# arXiv metadata retrieval
+ARXIV_API_URL = "https://export.arxiv.org/api/query"
+ARXIV_COLLECTION_NAME = "arxiv_metadata"
+ARXIV_MAX_RESULTS = 100
+ARXIV_REQUEST_TIMEOUT = 60
+
+# Number of metadata records retrieved for a question
+ARXIV_TOP_K = 8
+
+# Identify our application to arXiv.
+ARXIV_USER_AGENT = "ResearchPaperAssistant/0.1"

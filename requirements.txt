@@ -10,3 +10,5 @@ langchain-chroma
 langchain-huggingface
 langchain-ollama
 pytest
+requests
+feedparser
